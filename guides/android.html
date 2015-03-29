@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <title>Android | Couchbase Mobile</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Canonical links -->
+  <link rel="canonical" href="http://yoursite.com/guides/android.html">
+  <!-- Alternative links -->
+  
+    
+      <link rel="alternative" hreflang="en" href="http://yoursite.com/guides/android.html">
+    
+  
+  <!-- Icon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/icon/apple-touch-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/icon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/icon/apple-touch-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/icon/apple-touch-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/icon/apple-touch-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/icon/apple-touch-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/icon/apple-touch-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/icon/apple-touch-icon-152x152.png">
+  <link rel="icon" type="image/png" href="/icon/favicon-196x196.png" sizes="196x196">
+  <link rel="icon" type="image/png" href="/icon/favicon-160x160.png" sizes="160x160">
+  <link rel="icon" type="image/png" href="/icon/favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/png" href="/icon/favicon-16x16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/icon/favicon-32x32.png" sizes="32x32">
+  <meta name="msapplication-TileColor" content="#2f83cd">
+  <meta name="msapplication-TileImage" content="/icon/mstile-144x144.png">
+  <!-- CSS -->
+  <!-- build:css build/css/navy.css -->
+  <link rel="stylesheet" href="/css/navy.css" type="text/css">
+  <!-- endbuild -->
+  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <!-- RSS -->
+  <link rel="alternative" href="/atom.xml" title="Couchbase Mobile" type="application/atom+xml">
+  <!-- Open Graph -->
+  <meta name="description" content="Getting StartedThe framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project, set up Couchbase Lite environment within Android Studio.
+Setup Envir">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Android">
+<meta property="og:url" content="http://yoursite.com/guides/android.html">
+<meta property="og:site_name" content="Couchbase Mobile">
+<meta property="og:description" content="Getting StartedThe framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project, set up Couchbase Lite environment within Android Studio.
+Setup Envir">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Android">
+<meta name="twitter:description" content="Getting StartedThe framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project, set up Couchbase Lite environment within Android Studio.
+Setup Envir">
+  <!-- Swiftype -->
+  <meta class="swiftype" name="title" data-type="string" content="Android">
+  <!-- Google Analytics -->
+  
+</head>
+<body class="">
+  <div id="container">
+    <header id="header" class="wrapper">
+    <div id="header-inner" class="inner">
+        <h1 id="logo-wrap">
+            <a href="/" id="logo">Hexo</a>
+        </h1>
+        <nav id="main-nav">
+            <ul>
+                <li class="main-nav-item"><a href="/guides/" class="main-nav-link">Guides</a></li><li class="main-nav-item"><a href="/api/" class="main-nav-link">API</a></li><li class="main-nav-item"><a href="/community/" class="main-nav-link">Community</a></li><li class="main-nav-item"><a href="https://forums.couchbase.com/c/mobile" class="main-nav-link">Forums</a></li><li class="main-nav-item"><a href="http://www.couchbase.com/nosql-databases/downloads#Couchbase_Mobile" class="main-nav-link">Downloads</a></li>
+                <li class="main-nav-item">
+                    <a href="https://github.com/" class="main-nav-link"><i class="fa fa-github-alt"></i></a>
+                </li>
+            </ul>
+        </nav>
+        <div id="lang-select-wrap">
+            <label id="lang-select-label"><i class="fa fa-globe"></i><span>English</span></label>
+            <select id="lang-select" data-canonical="">
+                
+                    <option value="en" selected>English</option>
+                
+            </select>
+        </div>
+        <div id="search-btn-wrap" class="main-nav-item">
+            <a id="search-btn" class="main-nav-link st-search-launcher"><i class="fa fa-search"></i></a>
+        </div>
+        <a id="mobile-nav-toggle">
+            <span class="mobile-nav-toggle-bar"></span>
+            <span class="mobile-nav-toggle-bar"></span>
+            <span class="mobile-nav-toggle-bar"></span>
+        </a>
+        <a id="mobile-search-btn" class="st-search-launcher"></a>
+    </div>
+</header>
+    <div id="content-wrap">
+  <div id="content" class="wrapper">
+    <div id="content-inner">
+      <article class="article-container" itemscope itemtype="http://schema.org/Article">
+        <div class="article-inner">
+          <div class="article">
+            <div class="inner">
+              <header class="article-header">
+                <h1 class="article-title" itemprop="name">Android</h1>
+                <a href="https://github.com/hexojs/site/edit/master/source/guides/android.md" class="article-edit-link" title="Improve this doc"><i class="fa fa-pencil"></i></a>
+              </header>
+              <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
+                <h3 id="Getting_Started" class="article-heading">Getting Started<a class="article-anchor" href="#Getting_Started" aria-hidden="true"></a></h3><p>The framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project, set up Couchbase Lite environment within Android Studio.</p>
+<h3 id="Setup_Environment" class="article-heading">Setup Environment<a class="article-anchor" href="#Setup_Environment" aria-hidden="true"></a></h3><ol>
+<li><p>Before adding Couchbase Lite to your Android project, select <strong>Tools&gt;Android&gt;SDK Manager</strong> from the Android Studio menu bar to install packages.  Install the necessary packages by selecting the following and then click <strong>Install packages</strong>: </p>
+<p> *Tools/Android SDK Tools</p>
+<p>   *Tools/Android SDK Platform-tools</p>
+<p> *Tools/Android SDK Build-tools</p>
+<p> *Android API (currently recommended: API 19)</p>
+<p> *Extras/Google Repository</p>
+<p> *Extras/Android Support Repository</p>
+</li>
+</ol>
+<h3 id="Add_Couchbase_Lite_Maven_Repository" class="article-heading">Add Couchbase Lite Maven Repository<a class="article-anchor" href="#Add_Couchbase_Lite_Maven_Repository" aria-hidden="true"></a></h3><ol>
+<li><p>Open the project level <strong>build.gradle</strong> file and add the following lines to the top-level <strong>allprojects/repositories</strong> section to resolve dependencies through Couchbase Maven repository: </p>
+ <pre><code>maven {
+ url "http://files.couchbase.com/maven2/"
+}</code></pre>
+
+<p> After adding the extra lines, the repositories section should look similar to this:</p>
+ <pre><code>repositories {
+ mavenCentral()
+ maven {
+     url "http://files.couchbase.com/maven2/"
+ }
+}</code></pre>
+
+</li>
+</ol>
+<h3 id="Add_Couchbase_Lite_Dependencies" class="article-heading">Add Couchbase Lite Dependencies<a class="article-anchor" href="#Add_Couchbase_Lite_Dependencies" aria-hidden="true"></a></h3><ol>
+<li><p>Open the app level <strong>build.gradle</strong> file and add the following lines to the <strong>android</strong> section:</p>
+<pre><code>// workaround for "duplicate files during packaging of APK" issue
+// see https://groups.google.com/d/msg/adt-dev/bl5Rc4Szpzg/wC8cylTWuIEJ
+packagingOptions {
+    exclude 'META-INF/ASL2.0'
+    exclude 'META-INF/LICENSE'
+    exclude 'META-INF/NOTICE'
+}</code></pre>  
+</li>
+<li><p>After you add the extra line, the dependencies section should look similar to this:</p>
+<pre><code>maven {
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.couchbase.lite:couchbase-lite-android:{latest-version}'
+}</code></pre>
+</li>
+<li><p>In the Android Studio tool bar, click <strong>Sync Project with Gradle Files.</strong></p>
+</li>
+</ol>
+<h3 id="Verify_Couchbase_Lite_Setup" class="article-heading">Verify Couchbase Lite Setup<a class="article-anchor" href="#Verify_Couchbase_Lite_Setup" aria-hidden="true"></a></h3><p>Run the empty project to verify whether the dependencies are set up correctly.</p>
+<ol>
+<li><p>In the Android Studio tool bar, click Run</p>
+</li>
+<li><p>When prompted, start the emulator.</p>
+<p>You should see the app start in the emulator and the text “Hello World” in the app window, similar to the following figure.  You now have Couchbase Lite within your Android project.</p>
+</li>
+</ol>
+
+              </div>
+              <footer class="article-footer">
+                <time class="article-footer-updated" datetime="2015-03-29T10:51:37.000Z" itemprop="dateModified">Last updated: 2015-03-29</time>
+                <a href="ios.html" class="article-footer-prev" title="iOS"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="xamarin.html" class="article-footer-next" title="Xamarin"><span>Next</span><i class="fa fa-chevron-right"></i></a>
+              </footer>
+              
+            </div>
+          </div>
+          <aside id="article-toc" role="navigation">
+            <div id="article-toc-inner">
+              <strong class="sidebar-title">Contents</strong>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting_Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup_Environment"><span class="toc-text">Setup Environment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_Couchbase_Lite_Maven_Repository"><span class="toc-text">Add Couchbase Lite Maven Repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_Couchbase_Lite_Dependencies"><span class="toc-text">Add Couchbase Lite Dependencies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verify_Couchbase_Lite_Setup"><span class="toc-text">Verify Couchbase Lite Setup</span></a></li></ol>
+              <a href="#" id="article-toc-top">Back to Top</a>
+            </div>
+          </aside>
+        </div>
+      </article>
+      <aside id="sidebar" role="navigation">
+  <div class="inner"><strong class="sidebar-title">Getting Started</strong><a href="index.html" class="sidebar-link">Overview</a><a href="ios.html" class="sidebar-link">iOS</a><a href="android.html" class="sidebar-link current">Android</a><a href="xamarin.html" class="sidebar-link">Xamarin</a><strong class="sidebar-title">Couchbase Lite</strong><a href="manager.html" class="sidebar-link">Manager</a><a href="database.html" class="sidebar-link">Database</a><a href="document.html" class="sidebar-link">Document</a><a href="revision.html" class="sidebar-link">Revision</a><a href="attachment.html" class="sidebar-link">View</a><a href="view.html" class="sidebar-link">View</a><a href="query.html" class="sidebar-link">Query</a><a href="replication.html" class="sidebar-link">Replication</a><a href="model.html" class="sidebar-link">Model (iOS only)</a><strong class="sidebar-title">Sync Gateway</strong><a href="running_sg.html" class="sidebar-link">Running Sync Gateway</a><a href="configuration_and_adminstration.html" class="sidebar-link">Configuration and administration</a><a href="data_routing.html" class="sidebar-link">Channels</a><a href="sync_function.html" class="sidebar-link">Sync Function</a><a href="working_web_apps.html" class="sidebar-link">Web apps</a><a href="connecting_backend_processes.html" class="sidebar-link">Backend processes</a><a href="null" class="sidebar-link">Deployment</a><a href="null" class="sidebar-link">Reverse proxy</a><a href="null" class="sidebar-link">Accessing Server Views</a><a href="null" class="sidebar-link">OS Level Tuning</a></div>
+</aside>
+    </div>
+  </div>
+</div>
+    <footer id="footer" class="wrapper">
+  <div class="inner">
+    <div id="footer-copyright">
+      &copy; 2015 <a href="http://zespia.tw/" target="_blank">Couchbase</a><br>
+    </div>
+    <div id="footer-links">
+      <a href="https://twitter.com/" class="footer-link" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://github.com/" class="footer-link" target="_blank"><i class="fa fa-github-alt"></i></a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <div id="mobile-nav-dimmer"></div>
+  <nav id="mobile-nav">
+  <div id="mobile-nav-inner">
+    <ul id="mobile-nav-list">
+      <li class="mobile-nav-item"><a href="/guides/" class="mobile-nav-link">Guides</a></li><li class="mobile-nav-item"><a href="/api/" class="mobile-nav-link">API</a></li><li class="mobile-nav-item"><a href="/community/" class="mobile-nav-link">Community</a></li><li class="mobile-nav-item"><a href="https://forums.couchbase.com/c/mobile" class="mobile-nav-link">Forums</a></li><li class="mobile-nav-item"><a href="http://www.couchbase.com/nosql-databases/downloads#Couchbase_Mobile" class="mobile-nav-link">Downloads</a></li>
+      <li class="mobile-nav-item">
+        <a href="https://github.com/" class="mobile-nav-link" rel="external" target="_blank">GitHub</a>
+      </li>
+    </ul>
+    
+      <strong class="mobile-nav-title">Getting Started</strong><a href="index.html" class="mobile-nav-link">Overview</a><a href="ios.html" class="mobile-nav-link">iOS</a><a href="android.html" class="mobile-nav-link current">Android</a><a href="xamarin.html" class="mobile-nav-link">Xamarin</a><strong class="mobile-nav-title">Couchbase Lite</strong><a href="manager.html" class="mobile-nav-link">Manager</a><a href="database.html" class="mobile-nav-link">Database</a><a href="document.html" class="mobile-nav-link">Document</a><a href="revision.html" class="mobile-nav-link">Revision</a><a href="attachment.html" class="mobile-nav-link">View</a><a href="view.html" class="mobile-nav-link">View</a><a href="query.html" class="mobile-nav-link">Query</a><a href="replication.html" class="mobile-nav-link">Replication</a><a href="model.html" class="mobile-nav-link">Model (iOS only)</a><strong class="mobile-nav-title">Sync Gateway</strong><a href="running_sg.html" class="mobile-nav-link">Running Sync Gateway</a><a href="configuration_and_adminstration.html" class="mobile-nav-link">Configuration and administration</a><a href="data_routing.html" class="mobile-nav-link">Channels</a><a href="sync_function.html" class="mobile-nav-link">Sync Function</a><a href="working_web_apps.html" class="mobile-nav-link">Web apps</a><a href="connecting_backend_processes.html" class="mobile-nav-link">Backend processes</a><a href="null" class="mobile-nav-link">Deployment</a><a href="null" class="mobile-nav-link">Reverse proxy</a><a href="null" class="mobile-nav-link">Accessing Server Views</a><a href="null" class="mobile-nav-link">OS Level Tuning</a>
+    
+  </div>
+  <div id="mobile-lang-select-wrap">
+    <span id="mobile-lang-select-label"><i class="fa fa-globe"></i><span>English</span></span>
+    <select id="mobile-lang-select" data-canonical="">
+      
+        <option value="en" selected>English</option>
+      
+    </select>
+  </div>
+</nav>
+  <!-- Scripts -->
+<!-- build:js build/js/main.js -->
+<script src="/js/lang_select.js" type="text/javascript"></script>
+<script src="/js/toc.js" type="text/javascript"></script>
+<script src="/js/mobile_nav.js" type="text/javascript"></script>
+<!-- endbuild -->
+<script src="//cdn.jsdelivr.net/retinajs/1.1.0/retina.min.js" async></script>
+
+<!-- Swiftype -->
+<script type="text/javascript">
+  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+  })(window,document,'script','//s.swiftypecdn.com/install/v1/st.js','_st');
+
+  _st('install','');
+</script>
+</body>
+</html>
