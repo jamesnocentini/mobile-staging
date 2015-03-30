@@ -39,20 +39,25 @@
   <link rel="alternative" href="/mobile-staging/atom.xml" title="Couchbase Mobile" type="application/atom+xml">
   <!-- Open Graph -->
   <meta name="description" content="Getting StartedThe framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project:
-Setup Environment
-Before adding Couchbase Lite to your Android proje">
+Setup Android Environment
+Create a new project from Xamarin Studio b">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Xamarin">
 <meta property="og:url" content="http://yoursite.com/mobile-staging/guides/xamarin.html">
 <meta property="og:site_name" content="Couchbase Mobile">
 <meta property="og:description" content="Getting StartedThe framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project:
-Setup Environment
-Before adding Couchbase Lite to your Android proje">
+Setup Android Environment
+Create a new project from Xamarin Studio b">
+<meta property="og:image" content="http://cl.ly/aQRu/Screen%20Shot%202015-03-29%20at%2012.56.09%20PM.png">
+<meta property="og:image" content="http://cl.ly/aQkZ/download/Screen%20Shot%202015-03-29%20at%201.27.48%20PM.png">
+<meta property="og:image" content="http://cl.ly/aQUv/download/Screen%20Shot%202015-03-29%20at%201.32.35%20PM.png">
+<meta property="og:image" content="http://cl.ly/aPql/download/Screen%20Shot%202015-03-29%20at%201.41.36%20PM.png">
+<meta property="og:image" content="http://cl.ly/aQXm/download/Screen%20Shot%202015-03-29%20at%205.33.35%20PM.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Xamarin">
 <meta name="twitter:description" content="Getting StartedThe framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project:
-Setup Environment
-Before adding Couchbase Lite to your Android proje">
+Setup Android Environment
+Create a new project from Xamarin Studio b">
   <!-- Swiftype -->
   <meta class="swiftype" name="title" data-type="string" content="Xamarin">
   <!-- Google Analytics -->
@@ -105,65 +110,28 @@ Before adding Couchbase Lite to your Android proje">
               </header>
               <div class="article-content" itemprop="articleBody" data-swiftype-index="true">
                 <h3 id="Getting_Started" class="article-heading">Getting Started<a class="article-anchor" href="#Getting_Started" aria-hidden="true"></a></h3><p>The framework provides the interfaces for writing apps with Couchbase Lite.  Starting from an empty Android project:</p>
-<h3 id="Setup_Environment" class="article-heading">Setup Environment<a class="article-anchor" href="#Setup_Environment" aria-hidden="true"></a></h3><ol>
-<li><p>Before adding Couchbase Lite to your Android project, select <strong>Tools&gt;Android&gt;SDK Manager</strong> from the Android Studio menu bar to install packages.  Install the necessary packages by selecting the following and then click <strong>Install packages</strong>: </p>
-<p> *Tools/Android SDK Tools</p>
-<p>   *Tools/Android SDK Platform-tools</p>
-<p> *Tools/Android SDK Build-tools</p>
-<p> *Android API (currently recommended: API 19)</p>
-<p> *Extras/Google Repository</p>
-<p> *Extras/Android Support Repository</p>
+<h3 id="Setup_Android_Environment" class="article-heading">Setup Android Environment<a class="article-anchor" href="#Setup_Android_Environment" aria-hidden="true"></a></h3><ol>
+<li><p>Create a new project from Xamarin Studio by clicking on <strong>New Solution</strong>:<br><img src="http://cl.ly/aQRu/Screen%20Shot%202015-03-29%20at%2012.56.09%20PM.png" alt="img"></p>
+</li>
+<li><p>Select <strong>Android</strong> under the <strong>C#</strong> tab and choose <strong>Android Application</strong> as the project.  Define an application project name and click <strong>OK</strong><br><img src="http://cl.ly/aQkZ/download/Screen%20Shot%202015-03-29%20at%201.27.48%20PM.png" alt="img"></p>
 </li>
 </ol>
-<h3 id="Add_Couchbase_Lite_Maven_Repository" class="article-heading">Add Couchbase Lite Maven Repository<a class="article-anchor" href="#Add_Couchbase_Lite_Maven_Repository" aria-hidden="true"></a></h3><ol>
-<li><p>Open the project level <strong>build.gradle</strong> file and add the following lines to the top-level <strong>allprojects/repositories</strong> section to resolve dependencies through Couchbase Maven repository: </p>
- <pre><code>maven {
- url "http://files.couchbase.com/maven2/"
-}</code></pre>
-
-<p> After adding the extra lines, the repositories section should look similar to this:</p>
- <pre><code>repositories {
- mavenCentral()
- maven {
-     url "http://files.couchbase.com/maven2/"
- }
-}</code></pre>
-
+<h3 id="Add_Couchbase_Lite_NuGet_Package" class="article-heading">Add Couchbase Lite NuGet Package<a class="article-anchor" href="#Add_Couchbase_Lite_NuGet_Package" aria-hidden="true"></a></h3><ol>
+<li><p>Download Couchbase Lite .NET package from NuGet by right clicking on the project within the <strong>Solution</strong> explorer section and selecting <strong>Add &gt; Add NuGet Packages…</strong><br><img src="http://cl.ly/aQUv/download/Screen%20Shot%202015-03-29%20at%201.32.35%20PM.png" alt="img"> </p>
+</li>
+<li><p>From the <strong>Add Packages</strong> prompt, type <strong>Couchbase Lite</strong> in the top right search field.  Select Couchbase Lite from the list of results and click <strong>Add Package</strong>.  Xamarin Studio will add the packages and all the dependencies.<br><img src="http://cl.ly/aPql/download/Screen%20Shot%202015-03-29%20at%201.41.36%20PM.png" alt="img"> </p>
 </li>
 </ol>
-<h3 id="Add_Couchbase_Lite_Dependencies" class="article-heading">Add Couchbase Lite Dependencies<a class="article-anchor" href="#Add_Couchbase_Lite_Dependencies" aria-hidden="true"></a></h3><ol>
-<li><p>Open the app level <strong>build.gradle</strong> file and add the following lines to the <strong>android</strong> section:</p>
-<pre><code>// workaround for "duplicate files during packaging of APK" issue
-// see https://groups.google.com/d/msg/adt-dev/bl5Rc4Szpzg/wC8cylTWuIEJ
-packagingOptions {
-    exclude 'META-INF/ASL2.0'
-    exclude 'META-INF/LICENSE'
-    exclude 'META-INF/NOTICE'
-}</code></pre>  
+<h3 id="Verify_Couchbase_Lite_Setup" class="article-heading">Verify Couchbase Lite Setup<a class="article-anchor" href="#Verify_Couchbase_Lite_Setup" aria-hidden="true"></a></h3><ol>
+<li><p>Click on the <strong>Package Console</strong> tab on the bottom right from within Xamarin Studio to see detailed information on the installed Couchbase.Lite package<br><img src="http://cl.ly/aQXm/download/Screen%20Shot%202015-03-29%20at%205.33.35%20PM.png" alt="img"></p>
 </li>
-<li><p>After you add the extra line, the dependencies section should look similar to this:</p>
-<pre><code>maven {
-dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:19.+'
-    compile 'com.couchbase.lite:couchbase-lite-android:{latest-version}'
-}</code></pre>
-</li>
-<li><p>In the Android Studio tool bar, click <strong>Sync Project with Gradle Files.</strong></p>
-</li>
-</ol>
-<h3 id="Verify_Couchbase_Lite_Setup" class="article-heading">Verify Couchbase Lite Setup<a class="article-anchor" href="#Verify_Couchbase_Lite_Setup" aria-hidden="true"></a></h3><p>Run the empty project to verify whether the dependencies are set up correctly.</p>
-<ol>
-<li><p>In the Android Studio tool bar, click Run</p>
-</li>
-<li><p>When prompted, start the emulator.</p>
-<p>You should see the app start in the emulator and the text “Hello World” in the app window, similar to the following figure.  You now have Couchbase Lite within your Android project.</p>
+<li><p>Verify the installation by seeing if you have the message <strong>Successfully added ‘Couchbase.Lite..’</strong> to your project from within the <strong>Package Console</strong> </p>
 </li>
 </ol>
 
               </div>
               <footer class="article-footer">
-                <time class="article-footer-updated" datetime="2015-03-29T10:51:37.000Z" itemprop="dateModified">Last updated: 2015-03-29</time>
+                <time class="article-footer-updated" datetime="2015-03-30T12:51:57.000Z" itemprop="dateModified">Last updated: 2015-03-30</time>
                 <a href="android.html" class="article-footer-prev" title="Android"><i class="fa fa-chevron-left"></i><span>Prev</span></a><a href="manager.html" class="article-footer-next" title="Manager"><span>Next</span><i class="fa fa-chevron-right"></i></a>
               </footer>
               
@@ -172,7 +140,7 @@ dependencies {
           <aside id="article-toc" role="navigation">
             <div id="article-toc-inner">
               <strong class="sidebar-title">Contents</strong>
-              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting_Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup_Environment"><span class="toc-text">Setup Environment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_Couchbase_Lite_Maven_Repository"><span class="toc-text">Add Couchbase Lite Maven Repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_Couchbase_Lite_Dependencies"><span class="toc-text">Add Couchbase Lite Dependencies</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verify_Couchbase_Lite_Setup"><span class="toc-text">Verify Couchbase Lite Setup</span></a></li></ol>
+              <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Getting_Started"><span class="toc-text">Getting Started</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Setup_Android_Environment"><span class="toc-text">Setup Android Environment</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Add_Couchbase_Lite_NuGet_Package"><span class="toc-text">Add Couchbase Lite NuGet Package</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Verify_Couchbase_Lite_Setup"><span class="toc-text">Verify Couchbase Lite Setup</span></a></li></ol>
               <a href="#" id="article-toc-top">Back to Top</a>
             </div>
           </aside>
